@@ -103,7 +103,6 @@ RUN echo '#!/bin/sh'                                                            
 	echo 'exec "$@"'                                                                                          >> /entrypoint/primer.sh && \
 	chmod +x /entrypoint/primer.sh && \
 	/entrypoint/primer.sh;
-
 #
 # Usef  ul for debugging
 #
