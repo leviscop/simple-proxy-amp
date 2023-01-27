@@ -80,16 +80,16 @@ RUN echo '#!/bin/sh'                                                            
 	echo 'echo "      proxy_pass                    \$upstream;"                             >> default.conf' >> /entrypoint/primer.sh && \
 	echo 'echo "      proxy_read_timeout            ${PROXY_READ_TIMEOUT};"                  >> default.conf' >> /entrypoint/primer.sh && \
 	echo 'echo "      proxy_pass_request_headers    on;"                                     >> default.conf' >> /entrypoint/primer.sh && \
-	echo 'echo "      proxy_set_header     Host $host;                                       >> default.conf' >> /entrypoint/primer.sh && \
-	echo 'echo "      proxy_set_header     X-Real-IP $remote_addr;                           >> default.conf' >> /entrypoint/primer.sh && \
+	echo 'echo "      proxy_set_header     Host $host;"                                      >> default.conf' >> /entrypoint/primer.sh && \
+	echo 'echo "      proxy_set_header     X-Real-IP $remote_addr;"                          >> default.conf' >> /entrypoint/primer.sh && \
 	echo 'echo "      proxy_set_header     X-Forwarded-For \$proxy_add_x_forwarded_for;"     >> default.conf' >> /entrypoint/primer.sh && \
 	echo 'echo "      proxy_set_header     Upgrade \$http_upgrade;"                          >> default.conf' >> /entrypoint/primer.sh && \
 	echo 'echo "      proxy_set_header     Connection \$connection_upgrade;"                 >> default.conf' >> /entrypoint/primer.sh && \
-	echo 'echo "      proxy_set_header     X-AMP-Scheme $scheme;                             >> default.conf' >> /entrypoint/primer.sh && \
-	echo 'echo "      proxy_send_timeout      86400s;                                        >> default.conf' >> /entrypoint/primer.sh && \
-	echo 'echo "      proxy_http_version      1.1;                                           >> default.conf' >> /entrypoint/primer.sh && \
-	echo 'echo "      proxy_redirect          off;                                           >> default.conf' >> /entrypoint/primer.sh && \
-	echo 'echo "      proxy_buffering         off;                                           >> default.conf' >> /entrypoint/primer.sh && \
+	echo 'echo "      proxy_set_header     X-AMP-Scheme $scheme;"                            >> default.conf' >> /entrypoint/primer.sh && \
+	echo 'echo "      proxy_send_timeout      86400s;"                                       >> default.conf' >> /entrypoint/primer.sh && \
+	echo 'echo "      proxy_http_version      1.1;"                                          >> default.conf' >> /entrypoint/primer.sh && \
+	echo 'echo "      proxy_redirect          off;"                                          >> default.conf' >> /entrypoint/primer.sh && \
+	echo 'echo "      proxy_buffering         off;"                                          >> default.conf' >> /entrypoint/primer.sh && \
 	echo 'echo ""                                                                            >> default.conf' >> /entrypoint/primer.sh && \
 	echo 'echo "      client_max_body_size ${MAX_BODY_SIZE};"                                >> default.conf' >> /entrypoint/primer.sh && \
 	echo 'echo "      client_body_buffer_size ${MAX_BUFFER_SIZE};"                           >> default.conf' >> /entrypoint/primer.sh && \
